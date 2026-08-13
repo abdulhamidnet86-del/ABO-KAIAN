@@ -32,6 +32,7 @@ import AdminPlatformSettings from '@/components/admin/AdminPlatformSettings';
 import AdminContentAccess from '@/components/admin/AdminContentAccess';
 import AdminAIToolsTable from '@/components/admin/AdminAIToolsTable';
 import AdminBlogTable from '@/components/admin/AdminBlogTable';
+import AdminPhoneProgrammingTable from '@/components/admin/AdminPhoneProgrammingTable';
 import TopBar from '@/components/TopBar';
 import BottomNav from '@/components/BottomNav';
 import DrawerMenu from '@/components/DrawerMenu';
@@ -169,6 +170,9 @@ const AdminDashboard: React.FC = () => {
                 <TabsTrigger value="tech_blog" className="flex items-center gap-1 text-xs py-2 px-2">
                   <ShieldCheck className="w-4 h-4" /><span className="hidden sm:inline">التدوينات</span>
                 </TabsTrigger>
+                <TabsTrigger value="phone_prog" className="flex items-center gap-1 text-xs py-2 px-2">
+                  <Smartphone className="w-4 h-4 text-cyan-400" /><span className="hidden sm:inline">برمجة الهواتف</span>
+                </TabsTrigger>
                 <TabsTrigger value="content_access" className="flex items-center gap-1 text-xs py-2 px-2">
                   <Eye className="w-4 h-4" /><span className="hidden sm:inline">محتوى الزوار</span>
                 </TabsTrigger>
@@ -195,6 +199,7 @@ const AdminDashboard: React.FC = () => {
             <TabsContent value="clients"><AdminFeaturedClientsTable /></TabsContent>
             <TabsContent value="ai_tools"><AdminAIToolsTable /></TabsContent>
             <TabsContent value="tech_blog"><AdminBlogTable /></TabsContent>
+            <TabsContent value="phone_prog"><AdminPhoneProgrammingTable /></TabsContent>
             <TabsContent value="content_access"><AdminContentAccess /></TabsContent>
             <TabsContent value="platform"><AdminPlatformSettings /></TabsContent>
           </Tabs>

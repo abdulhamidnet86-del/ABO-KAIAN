@@ -14,6 +14,7 @@ import WifiPromoCard from '@/components/WifiPromoCard';
 import PortfolioPromoCard from '@/components/PortfolioPromoCard';
 import AIToolsPromoCard from '@/components/AIToolsPromoCard';
 import TechBlogPromoCard from '@/components/TechBlogPromoCard';
+import PhoneProgrammingPromoCard from '@/components/PhoneProgrammingPromoCard';
 import SocialIcons from '@/components/SocialIcons';
 import FeaturedClientsSection from '@/components/FeaturedClientsSection';
 import CustomHomeCards from '@/components/CustomHomeCards';
@@ -53,10 +54,13 @@ const HomePage: React.FC = () => {
 
           {/* Promo Cards Grid (2-columns on tablet/desktop, stacked on mobile) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 my-3">
+            {show('show_phone_programming') && <PhoneProgrammingPromoCard />}
+            {show('show_apps') && <AppsPromoCard />}
             {show('show_ai_tools') && <AIToolsPromoCard />}
             {show('show_packages') && <PackagesPromoCard />}
             {show('show_wifi') && <WifiPromoCard />}
             {show('show_livestream') && <LiveStreamPromoCard />}
+            {show('show_tech_blog') && <TechBlogPromoCard />}
           </div>
 
           {/* Portfolio Full Banner */}

@@ -71,6 +71,7 @@ export const DEFAULT_SETTINGS: Record<string, string> = {
   tech_blog_gradient_from: '#0f172a',
   tech_blog_gradient_to: '#0ea5e9',
   show_ai_tools: 'true',
+  show_phone_programming: 'true',
 
   // الألوان (HEX)
   theme_enabled: 'false',
@@ -114,6 +115,7 @@ Object.assign(DEFAULT_SETTINGS, {
   guest_page_wifi: 'true',
   guest_page_ai_tools: 'true',
   guest_page_tech_blog: 'true',
+  guest_page_phone: 'true',
   // الأزرار والإجراءات (true = مسموح للزائر بدون تسجيل)
   guest_action_booking: 'false',
   guest_action_order: 'false',

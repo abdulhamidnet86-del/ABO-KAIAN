@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import TopBar from '@/components/TopBar';
 import BottomNav from '@/components/BottomNav';
 import DrawerMenu from '@/components/DrawerMenu';
+import PageSeo from '@/components/PageSeo';
 import { useChannels, Channel } from '@/hooks/useChannels';
 
 const categories = [

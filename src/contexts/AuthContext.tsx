@@ -79,9 +79,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         fetchProfile(session.user.id);
       }
       
-      // Check for guest session
-      const guestData = localStorage.getItem('guest-session');
-      if (!session && guestData) {
+      // Auto-enable guest browsing if no logged in user session
+      if (!session) {
         setIsGuest(true);
       }
       

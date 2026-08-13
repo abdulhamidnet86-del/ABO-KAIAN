@@ -30,4 +30,5 @@ const PageSeo: React.FC<PageSeoProps> = ({ title, description, path, jsonLd }) =
   );
 };
 
+export { PageSeo };
 export default PageSeo;

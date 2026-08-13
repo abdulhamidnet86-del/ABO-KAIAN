@@ -31,6 +31,7 @@ import WifiNetworksPage from "@/pages/WifiNetworksPage";
 import WifiSystemPage from "@/pages/WifiSystemPage";
 import WifiPurchasePage from "@/pages/WifiPurchasePage";
 import AIToolsPage from "@/pages/AIToolsPage";
+import PhoneProgrammingPage from "@/pages/PhoneProgrammingPage";
 import GuestBlockedPage from "@/pages/GuestBlockedPage";
 import NotFound from "./pages/NotFound";
 import { GuestActionProvider } from "@/contexts/GuestActionContext";
@@ -114,6 +115,7 @@ const AppContent: React.FC = () => {
       <Route path="/wifi-networks/:productId" element={<GuestPageRoute pageKey="wifi"><WifiSystemPage /></GuestPageRoute>} />
       <Route path="/wifi-networks/:productId/purchase" element={<GuestPageRoute pageKey="wifi"><WifiPurchasePage /></GuestPageRoute>} />
       <Route path="/ai-tools" element={<GuestPageRoute pageKey="ai_tools"><AIToolsPage /></GuestPageRoute>} />
+      <Route path="/phone-programming" element={<GuestPageRoute pageKey="phone"><PhoneProgrammingPage /></GuestPageRoute>} />
       <Route path="/tech-blog" element={<GuestPageRoute pageKey="tech_blog"><TechBlogPage /></GuestPageRoute>} />
       <Route path="/tech-blog/post/:id" element={<GuestPageRoute pageKey="tech_blog"><TechBlogPostPage /></GuestPageRoute>} />
       <Route path="/tech-blog/:slug" element={<GuestPageRoute pageKey="tech_blog"><TechBlogSectionPage /></GuestPageRoute>} />

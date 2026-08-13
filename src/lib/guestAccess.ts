@@ -15,6 +15,7 @@ export const GUEST_PAGES: GuestPageDef[] = [
   { key: 'wifi', label: 'شبكات الواي فاي', paths: ['/wifi-networks'] },
   { key: 'ai_tools', label: 'أدوات الذكاء الاصطناعي', paths: ['/ai-tools'] },
   { key: 'tech_blog', label: 'تدوينات معلوماتية', paths: ['/tech-blog'] },
+  { key: 'phone', label: 'برمجة الهواتف الذكية', paths: ['/phone-programming'] },
 ];
 
 export const GUEST_ACTIONS: GuestActionDef[] = [

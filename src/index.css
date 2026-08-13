@@ -130,18 +130,20 @@
   }
 
   html {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif !important;
     font-size: 93.75%; /* Slightly smaller base font size (approx 15px base) */
     direction: rtl;
   }
 
+  body, input, button, select, textarea, p, span, h1, h2, h3, h4, h5, h6, a, label, div {
+    font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif !important;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Cairo', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cairo', sans-serif;
     font-weight: 700;
   }
 }

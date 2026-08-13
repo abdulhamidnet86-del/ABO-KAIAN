@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Eye, EyeOff, Sparkles, Mail, Lock, User, UserCheck } from 'lucide-react';
+import { Eye, EyeOff, Sparkles, Mail, Lock, User, UserCheck, AlertTriangle } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 import { useSiteSettings } from '@/hooks/useSiteSettings';
+import { isSupabaseConfigured } from '@/integrations/supabase/client';
 
 type AuthMode = 'login' | 'register';
 
@@ -128,6 +129,25 @@ const AuthPage: React.FC = () => {
         {/* Auth Form Card */}
         <div className="bg-white/95 backdrop-blur-md rounded-[2.2rem] p-6 sm:p-8 shadow-2xl shadow-blue-900/15 border border-slate-100/80">
           
+          {!isSupabaseConfigured && (
+            <div className="mb-6 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm space-y-2">
+              <div className="flex items-center gap-2 font-bold text-amber-800">
+                <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
+                <span>إعدادات الاتصال بقاعدة البيانات على Netlify</span>
+              </div>
+              <p className="leading-relaxed text-slate-700">
+                لتفعيل التسجيل والدخول على موقعك في Netlify، يرجى إضافة متغيّرات البيئة في لوحة تحكم Netlify تحت <strong>Site settings &gt; Environment variables</strong>:
+              </p>
+              <ul className="list-disc list-inside space-y-1 font-mono text-[11px] dir-ltr text-left text-slate-800 bg-amber-100/60 p-2 rounded-xl">
+                <li>VITE_SUPABASE_URL</li>
+                <li>VITE_SUPABASE_PUBLISHABLE_KEY</li>
+              </ul>
+              <p className="text-[11px] text-amber-800 font-semibold pt-1">
+                💡 يمكن للزوار استخدام زر "الدخول كزائر" أدناه فوراً.
+              </p>
+            </div>
+          )}
+
           {/* Capsule Tab Switcher */}
           <div className="bg-slate-100/90 p-1.5 rounded-[1.4rem] flex items-center justify-between gap-1 border border-slate-200/80 mb-6">
             <button
